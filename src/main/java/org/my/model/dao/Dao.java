@@ -21,11 +21,13 @@ public interface Dao<T> extends AutoCloseable{
      * The method gets the information about the entity from the database by id.
      *
      * @param id - entity's id.
+     * @return entity with id.
      */
     T findById(Long id);
 
     /**
      * The method gets the information about all the entities from the database.
+     * @return list of all entities.
      */
     List<T> findAll();
 
@@ -54,6 +56,7 @@ public interface Dao<T> extends AutoCloseable{
      * The method check is the entity is already exist in database.
      *
      * @param entity - the entity that needs to be checked.
+     * @return is existing entity
      */
     boolean isExisting(T entity);
 

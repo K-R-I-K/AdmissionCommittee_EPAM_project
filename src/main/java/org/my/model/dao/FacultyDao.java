@@ -16,6 +16,7 @@ public interface FacultyDao extends Dao<Faculty> {
      * The method gets faculty by name.
      *
      * @param name - faculty`s name.
+     * @return faculty with name.
      */
     Faculty findByName(String name);
 }

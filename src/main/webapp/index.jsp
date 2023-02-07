@@ -95,7 +95,7 @@
 
 
 
-<h2>Home Page</h2>
+<img style="width:100%;height:90%;" src="https://i.obozrevatel.com/news/2020/8/20/38.jpg?size=1944x924"/>
 
 <script>
     function myFunction() {

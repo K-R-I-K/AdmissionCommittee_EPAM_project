@@ -20,14 +20,14 @@ public class AddFaculty implements Command {
                     .totalPlaces(Long.parseLong(request.getParameter("total_places")))
                     .build();
             if(facultyDao.isExisting(faculty)) {
-                return "redirect:newFaculty.jsp";
+                return "newFaculty.jsp";
             } else {
                 facultyDao.add(faculty);
                 request.getSession().setAttribute("faculties", facultyDao.findAll());
                 return "redirect:faculties.jsp";
             }
         } catch (NullPointerException |  NumberFormatException e) {
-            return "redirect:newFaculty.jsp";
+            return "newFaculty.jsp";
         }
     }
 

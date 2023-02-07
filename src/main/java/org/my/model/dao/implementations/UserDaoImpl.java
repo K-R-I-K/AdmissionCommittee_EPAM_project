@@ -4,9 +4,11 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.my.model.dao.UserDao;
 import org.my.model.dao.mapper.UserMapper;
+import org.my.model.dao.util.SHA512Utils;
 import org.my.model.db.DBException;
 import org.my.model.entities.User;
 
+import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -30,7 +32,7 @@ public class UserDaoImpl implements UserDao {
                     "INSERT INTO users (login, password, role, name, email, city, region, educational_institution) " +
                             "VALUES(?, ?, ?, ?, ?, ?, ?, ?)");
             statement.setString(1, entity.getLogin());
-            statement.setString(2, entity.getPassword());
+            statement.setString(2, SHA512Utils.toHexString(SHA512Utils.getSHA(entity.getPassword())));
             statement.setString(3, entity.getRole().toString());
             statement.setString(4, entity.getName());
             statement.setString(5, entity.getEmail());
@@ -39,7 +41,7 @@ public class UserDaoImpl implements UserDao {
             statement.setString(8, entity.getEducationalInstitution());
 
             statement.executeUpdate();
-        } catch (SQLException e){
+        } catch (SQLException | NoSuchAlgorithmException  e){
             logger.error("Cannot save User." + e);
             throw new DBException("Invalid User input", e);
         }
@@ -146,13 +148,13 @@ public class UserDaoImpl implements UserDao {
         try{
             PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM users WHERE login=? AND password=?");
             preparedStatement.setString(1, login);
-            preparedStatement.setString(2, password);
+            preparedStatement.setString(2, SHA512Utils.toHexString(SHA512Utils.getSHA(password)));
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()){
                 return userMapper.extractFromResultSet(resultSet);
             }
             return null;
-        }catch (SQLException e){
+        }catch (SQLException | NoSuchAlgorithmException e){
             logger.error("Cannot find User by login and password." + e);
             throw new DBException("Cannot find User by login and password", e);
         }

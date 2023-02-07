@@ -13,6 +13,7 @@ public interface UserDao extends Dao<User>{
      *
      * @param login - user`s login.
      * @param password - user`s password.
+     * @return user with login and password.
      */
     User findByLoginAndPassword(String login, String password);
 }

@@ -18,6 +18,7 @@ public interface ApplicantFacultyDao extends Dao<ApplicantFaculty>{
      * The method gets ApplicantFaculties by faculty id.
      *
      * @param facultyId - faculty`s id.
+     * @return list of ApplicantFaculties with facultyId.
      */
     List<ApplicantFaculty> findByFacultyId(Long facultyId);
 
@@ -25,6 +26,7 @@ public interface ApplicantFacultyDao extends Dao<ApplicantFaculty>{
      * The method gets faculties` ids by user id.
      *
      * @param userId - user`s id.
+     * @return list of facultyIds with userId.
      */
     List<Long> getFacultiesWithApplicant(Long userId);
 
@@ -33,6 +35,7 @@ public interface ApplicantFacultyDao extends Dao<ApplicantFaculty>{
      *
      * @param userId - user`s id.
      * @param facultyId - faculty`s id.
+     * @return applicantFaculty with userId and facultyId.
      */
     ApplicantFaculty findByUserAndFaculty(Long userId, Long facultyId);
 }

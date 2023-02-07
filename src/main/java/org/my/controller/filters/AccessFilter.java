@@ -25,13 +25,17 @@ public class AccessFilter implements Filter {
         HttpServletResponse response = (HttpServletResponse) servletResponse;
         String path = request.getRequestURI();
         User user = (User) request.getSession().getAttribute("user");
-        if((path.contains("registerForFaculties") || path.contains("setFacultiesForRegistration")) && user == null) {
+        if((path.contains("registerForFaculties") || path.contains("setFacultiesForRegistration")) &&
+                (user == null || user.getRole() == Role.BLOCKED)){
             logger.warn("Guest tried to register for faculties");
             response.sendRedirect("index.jsp");
         } else if(path.contains("newFaculty") || path.contains("deleteFaculty") ||
-                path.contains("editFaculty") || path.contains("getEditFaculty")) {
-            if (user == null || user.getRole().equals(Role.APPLICANT)) {
-                logger.warn("Applicant or guest tried to access admin page without permission");
+                path.contains("editFaculty") || path.contains("getEditFaculty") ||
+                path.contains("getUsers") || path.contains("makeAdmin") ||
+                path.contains("blockUser") || path.contains("unblockUser")||
+                path.contains("permit") || path.contains("forbid")) {
+            if (user == null || user.getRole().equals(Role.APPLICANT) || user.getRole().equals(Role.BLOCKED)) {
+                logger.warn("Applicant (Blocked) or guest tried to access admin page without permission");
                 response.sendRedirect("index.jsp");
 
             } else {
