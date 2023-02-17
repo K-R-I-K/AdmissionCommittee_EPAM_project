@@ -13,6 +13,6 @@ public class DeleteFaculty implements Command {
     public String execute(HttpServletRequest request) {
         facultyDao.delete(Long.parseLong(request.getParameter("id")));
         request.getSession().setAttribute("faculties", facultyDao.findAll());
-        return "redirect:faculties.jsp";
+        return "redirect:/home?command=getFaculties";
     }
 }

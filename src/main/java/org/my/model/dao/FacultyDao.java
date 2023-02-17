@@ -19,4 +19,13 @@ public interface FacultyDao extends Dao<Faculty> {
      * @return faculty with name.
      */
     Faculty findByName(String name);
+
+    /**
+     * The method gets faculties in sortingType order.
+     *
+     * @param sortingType - type of sorting.
+     * @param page - page number for pagination.
+     * @return faculties in sortingType order.
+     */
+    List<Faculty> getFacultiesWithSorting(String sortingType, int page);
 }

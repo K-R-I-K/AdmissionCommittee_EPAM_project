@@ -23,8 +23,7 @@ public class AddFaculty implements Command {
                 return "newFaculty.jsp";
             } else {
                 facultyDao.add(faculty);
-                request.getSession().setAttribute("faculties", facultyDao.findAll());
-                return "redirect:faculties.jsp";
+                return "redirect:/home?command=getFaculties";
             }
         } catch (NullPointerException |  NumberFormatException e) {
             return "newFaculty.jsp";

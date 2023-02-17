@@ -637,3 +637,108 @@
 2023-02-07 18:24:37 INFO  Servlet:42 - Servlet.doGet; commandName ==> logOut
 2023-02-07 18:24:44 INFO  Servlet:42 - Servlet.doGet; commandName ==> logIn
 2023-02-07 18:24:47 INFO  Servlet:42 - Servlet.doGet; commandName ==> logOut
+2023-02-16 21:37:26 INFO  Servlet:22 - Servlet.init
+2023-02-16 21:37:26 INFO  Servlet:42 - Servlet.doGet; commandName ==> logIn
+2023-02-16 21:37:29 INFO  Servlet:42 - Servlet.doGet; commandName ==> logOut
+2023-02-17 22:40:09 INFO  Servlet:22 - Servlet.init
+2023-02-17 22:40:09 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:40:12 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:40:13 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:40:14 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:40:15 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:40:16 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:40:17 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:40:18 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:40:19 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:40:19 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:40:20 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:40:21 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:40:21 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:40:25 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:40:26 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:40:27 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:40:27 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:40:34 INFO  Servlet:42 - Servlet.doGet; commandName ==> logIn
+2023-02-17 22:40:37 INFO  AccessFilter:42 - Admin opened one of the admin pages
+2023-02-17 22:40:39 INFO  Servlet:42 - Servlet.doGet; commandName ==> addFaculty
+2023-02-17 22:40:41 INFO  AccessFilter:42 - Admin opened one of the admin pages
+2023-02-17 22:40:43 INFO  Servlet:42 - Servlet.doGet; commandName ==> addFaculty
+2023-02-17 22:40:45 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:40:46 INFO  AccessFilter:42 - Admin opened one of the admin pages
+2023-02-17 22:40:49 INFO  Servlet:42 - Servlet.doGet; commandName ==> addFaculty
+2023-02-17 22:40:50 INFO  AccessFilter:42 - Admin opened one of the admin pages
+2023-02-17 22:40:52 INFO  Servlet:42 - Servlet.doGet; commandName ==> addFaculty
+2023-02-17 22:42:21 INFO  Servlet:60 - Servlet.destroy
+2023-02-17 22:42:38 INFO  Servlet:22 - Servlet.init
+2023-02-17 22:42:38 INFO  Servlet:42 - Servlet.doGet; commandName ==> logIn
+2023-02-17 22:42:42 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:42:46 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:42:47 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:42:48 INFO  AccessFilter:42 - Admin opened one of the admin pages
+2023-02-17 22:42:51 INFO  Servlet:42 - Servlet.doGet; commandName ==> addFaculty
+2023-02-17 22:42:51 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:42:53 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:42:54 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:42:55 INFO  AccessFilter:42 - Admin opened one of the admin pages
+2023-02-17 22:42:58 INFO  Servlet:42 - Servlet.doGet; commandName ==> addFaculty
+2023-02-17 22:42:58 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:42:59 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:43:00 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:43:02 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:43:05 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:43:07 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:43:08 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:43:10 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:43:12 INFO  Servlet:42 - Servlet.doGet; commandName ==> getEditFaculty
+2023-02-17 22:43:17 INFO  Servlet:42 - Servlet.doGet; commandName ==> editFaculty
+2023-02-17 22:43:53 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculty
+2023-02-17 22:44:13 INFO  Servlet:22 - Servlet.init
+2023-02-17 22:44:13 INFO  Servlet:42 - Servlet.doGet; commandName ==> logIn
+2023-02-17 22:44:20 INFO  Servlet:42 - Servlet.doGet; commandName ==> setFacultiesForRegistration
+2023-02-17 22:44:27 INFO  Servlet:42 - Servlet.doGet; commandName ==> registerForFaculties
+2023-02-17 22:44:29 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:44:30 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:44:38 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:44:39 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:44:49 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:44:53 INFO  Servlet:42 - Servlet.doGet; commandName ==> getEditFaculty
+2023-02-17 22:44:59 INFO  Servlet:42 - Servlet.doGet; commandName ==> editFaculty
+2023-02-17 22:44:59 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:45:00 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:45:03 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:45:15 INFO  Servlet:42 - Servlet.doGet; commandName ==> getUsers
+2023-02-17 22:45:16 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:45:18 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:45:19 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:45:21 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:45:21 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:45:22 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:45:40 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:45:41 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:45:42 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:45:43 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:45:43 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:45:43 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:49:34 INFO  Servlet:60 - Servlet.destroy
+2023-02-17 22:49:41 INFO  Servlet:22 - Servlet.init
+2023-02-17 22:49:41 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:49:44 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:49:47 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:49:54 INFO  Servlet:42 - Servlet.doGet; commandName ==> logIn
+2023-02-17 22:49:58 INFO  AccessFilter:42 - Admin opened one of the admin pages
+2023-02-17 22:50:05 INFO  Servlet:42 - Servlet.doGet; commandName ==> addFaculty
+2023-02-17 22:50:05 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:50:06 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:50:08 INFO  AccessFilter:42 - Admin opened one of the admin pages
+2023-02-17 22:50:12 INFO  Servlet:42 - Servlet.doGet; commandName ==> addFaculty
+2023-02-17 22:50:12 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:50:13 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:50:13 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:50:14 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:52:17 INFO  Servlet:60 - Servlet.destroy
+2023-02-17 22:52:25 INFO  Servlet:22 - Servlet.init
+2023-02-17 22:52:25 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:52:31 INFO  Servlet:42 - Servlet.doGet; commandName ==> logIn
+2023-02-17 22:52:34 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:52:35 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-17 22:52:37 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties

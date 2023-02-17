@@ -22,7 +22,7 @@ public class EditFaculty implements Command {
                     .totalPlaces(Long.parseLong(request.getParameter("total_places")))
                     .build());
             request.getSession().setAttribute("faculties", facultyDao.findAll());
-            return "redirect:faculties.jsp";
+            return "redirect:/home?command=getFaculties";
         } catch (NullPointerException e) {
             return "redirect:faculty.jsp";
         }

@@ -2,6 +2,7 @@ package org.my.model.dao.implementations;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.my.controller.command.GetFaculties;
 import org.my.model.dao.FacultyDao;
 import org.my.model.dao.mapper.FacultyMapper;
 import org.my.model.db.DBException;
@@ -144,6 +145,32 @@ public class FacultyDaoImpl implements FacultyDao {
         }catch (SQLException e){
             logger.error("Cannot find Faculty." + e);
             throw new DBException("Cannot find Faculty", e);
+        }
+    }
+
+    @Override
+    public List<Faculty> getFacultiesWithSorting(String sortingType, int page) {
+        try{
+            String sqlSortingType = switch (sortingType) {
+                case "byName(a-z)" -> " f.name asc ";
+                case "byName(z-a)" -> " f.name desc ";
+                case "byNumberOfBudgetPlaces" -> " f.budget_places asc ";
+                case "byTheTotalNumberOfPlaces" -> " f.total_places asc";
+                default -> "f.name asc ";
+            };
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM faculties f " +
+                    "ORDER BY " + sqlSortingType +
+                    " LIMIT " + GetFaculties.PAGE_SIZE + " OFFSET ?");
+            statement.setInt(1, (page - 1) * GetFaculties.PAGE_SIZE);
+            ResultSet resultSet = statement.executeQuery();
+            List<Faculty> facultiesList = new ArrayList<>();
+            while(resultSet.next()){
+                facultiesList.add(facultyMapper.extractFromResultSet(resultSet));
+            }
+            return facultiesList;
+        }catch (SQLException e){
+            logger.error("Cannot find all Faculties." + e);
+            throw new DBException("Cannot find all Faculties", e);
         }
     }
 }

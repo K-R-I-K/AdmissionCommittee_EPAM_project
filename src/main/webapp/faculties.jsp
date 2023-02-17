@@ -161,12 +161,14 @@
                 <input name="sortingType" type="hidden" value="${sessionScope.sortingType}">
                 <button class="btn" type="submit"><<</button>
             </form>
-            <form action="home" method="get">
-                <input name="command" type="hidden" value="getFaculties">
-                <input name="page" type="hidden" value="<%=next(request.getParameter("page"))%>">
-                <input name="sortingType" type="hidden" value="${sessionScope.sortingType}">
-                <button class="btn" type="submit">>></button>
-            </form>
+            <c:if test="${isNext}">
+                <form action="home" method="get">
+                    <input name="command" type="hidden" value="getFaculties">
+                    <input name="page" type="hidden" value="<%=next(request.getParameter("page"))%>">
+                    <input name="sortingType" type="hidden" value="${sessionScope.sortingType}">
+                    <button class="btn" type="submit">>></button>
+                </form>
+            </c:if>
         </div>
     </div>
 </div>
