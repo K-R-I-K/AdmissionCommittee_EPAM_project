@@ -742,3 +742,79 @@
 2023-02-17 22:52:34 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
 2023-02-17 22:52:35 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
 2023-02-17 22:52:37 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-27 18:40:45 INFO  Servlet:22 - Servlet.init
+2023-02-27 18:40:46 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-27 18:40:49 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-27 18:40:53 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-27 19:12:01 INFO  Servlet:42 - Servlet.doGet; commandName ==> logIn
+2023-02-27 19:12:06 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-27 19:12:14 INFO  Servlet:42 - Servlet.doGet; commandName ==> getUsers
+2023-02-27 19:12:17 INFO  AccessFilter:42 - Admin opened one of the admin pages
+2023-02-27 19:12:18 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-27 19:12:23 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculty
+2023-02-27 19:12:27 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-27 19:12:28 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculty
+2023-02-27 19:12:29 INFO  Servlet:42 - Servlet.doGet; commandName ==> permit
+2023-02-27 19:12:30 INFO  Servlet:42 - Servlet.doGet; commandName ==> forbid
+2023-02-27 19:12:38 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-27 19:12:46 INFO  AccessFilter:42 - Admin opened one of the admin pages
+2023-02-27 19:12:47 INFO  Servlet:42 - Servlet.doGet; commandName ==> getUsers
+2023-02-27 19:12:55 INFO  Servlet:42 - Servlet.doGet; commandName ==> setFacultiesForRegistration
+2023-02-27 19:13:48 INFO  Servlet:42 - Servlet.doGet; commandName ==> changeLanguage
+2023-02-27 19:14:06 INFO  Servlet:42 - Servlet.doGet; commandName ==> setFacultiesForRegistration
+2023-02-27 19:14:10 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-27 19:14:22 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-27 19:14:24 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-27 19:14:28 INFO  Servlet:42 - Servlet.doGet; commandName ==> changeLanguage
+2023-02-27 19:14:29 INFO  Servlet:42 - Servlet.doGet; commandName ==> changeLanguage
+2023-02-27 19:14:30 INFO  AccessFilter:42 - Admin opened one of the admin pages
+2023-02-27 19:14:31 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-27 19:14:33 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-27 19:14:34 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-27 19:14:35 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-27 19:14:43 INFO  Servlet:42 - Servlet.doGet; commandName ==> setFacultiesForRegistration
+2023-02-27 19:15:09 INFO  Servlet:42 - Servlet.doGet; commandName ==> logOut
+2023-02-27 19:15:32 INFO  Servlet:42 - Servlet.doGet; commandName ==> logIn
+2023-02-27 19:15:40 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-27 19:15:42 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculty
+2023-02-27 19:15:48 INFO  Servlet:42 - Servlet.doGet; commandName ==> setFacultiesForRegistration
+2023-02-27 19:15:54 INFO  Servlet:42 - Servlet.doGet; commandName ==> logOut
+2023-02-27 19:16:08 INFO  Servlet:42 - Servlet.doGet; commandName ==> registration
+2023-02-27 19:16:33 INFO  Servlet:42 - Servlet.doGet; commandName ==> changeLanguage
+2023-02-27 19:33:22 ERROR FacultyDaoImpl:39 - Cannot save Faculty.org.postgresql.util.PSQLException: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "faculties_name_key"
+  Подробности: Ключ "(name)=(name111)" уже существует.
+2023-02-27 19:33:22 ERROR FacultyDaoImpl:39 - Cannot save Faculty.org.postgresql.util.PSQLException: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "faculties_name_key"
+  Подробности: Ключ "(name)=(name111)" уже существует.
+2023-02-27 19:33:22 ERROR FacultyDaoImpl:39 - Cannot save Faculty.org.postgresql.util.PSQLException: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "faculties_name_key"
+  Подробности: Ключ "(name)=(name111)" уже существует.
+2023-02-27 19:34:03 ERROR FacultyDaoImpl:39 - Cannot save Faculty.org.postgresql.util.PSQLException: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "faculties_name_key"
+  Подробности: Ключ "(name)=(name111)" уже существует.
+2023-02-27 19:34:03 ERROR FacultyDaoImpl:39 - Cannot save Faculty.org.postgresql.util.PSQLException: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "faculties_name_key"
+  Подробности: Ключ "(name)=(name111)" уже существует.
+2023-02-27 19:34:03 ERROR FacultyDaoImpl:39 - Cannot save Faculty.org.postgresql.util.PSQLException: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "faculties_name_key"
+  Подробности: Ключ "(name)=(name111)" уже существует.
+2023-02-27 19:35:15 ERROR FacultyDaoImpl:39 - Cannot save Faculty.org.postgresql.util.PSQLException: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "faculties_name_key"
+  Подробности: Ключ "(name)=(name111)" уже существует.
+2023-02-27 19:35:41 ERROR FacultyDaoImpl:39 - Cannot save Faculty.org.postgresql.util.PSQLException: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "faculties_name_key"
+  Подробности: Ключ "(name)=(name111)" уже существует.
+2023-02-27 19:35:41 ERROR FacultyDaoImpl:39 - Cannot save Faculty.org.postgresql.util.PSQLException: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "faculties_name_key"
+  Подробности: Ключ "(name)=(name111)" уже существует.
+2023-02-27 19:35:41 ERROR FacultyDaoImpl:39 - Cannot save Faculty.org.postgresql.util.PSQLException: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "faculties_name_key"
+  Подробности: Ключ "(name)=(name111)" уже существует.
+2023-02-28 01:39:26 INFO  Servlet:22 - Servlet.init
+2023-02-28 01:39:26 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-28 01:39:34 INFO  Servlet:42 - Servlet.doGet; commandName ==> logIn
+2023-02-28 01:39:38 INFO  Servlet:42 - Servlet.doGet; commandName ==> setFacultiesForRegistration
+2023-02-28 01:39:39 INFO  AccessFilter:42 - Admin opened one of the admin pages
+2023-02-28 01:39:43 INFO  Servlet:42 - Servlet.doGet; commandName ==> addFaculty
+2023-02-28 01:39:43 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-28 01:39:44 INFO  AccessFilter:42 - Admin opened one of the admin pages
+2023-02-28 01:39:47 INFO  Servlet:42 - Servlet.doGet; commandName ==> addFaculty
+2023-02-28 01:39:47 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-28 01:39:47 INFO  AccessFilter:42 - Admin opened one of the admin pages
+2023-02-28 01:39:49 INFO  Servlet:42 - Servlet.doGet; commandName ==> addFaculty
+2023-02-28 01:39:49 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-28 01:39:54 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-28 01:39:57 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-28 01:39:59 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties
+2023-02-28 01:40:02 INFO  Servlet:42 - Servlet.doGet; commandName ==> getFaculties

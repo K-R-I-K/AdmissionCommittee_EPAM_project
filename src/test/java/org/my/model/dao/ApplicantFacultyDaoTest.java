@@ -8,6 +8,8 @@ import org.my.model.dao.implementations.ApplicantFacultyDaoImpl;
 import org.my.model.db.ConnectionPool;
 import org.my.model.db.DBException;
 import org.my.model.entities.ApplicantFaculty;
+import org.my.model.entities.Role;
+import org.my.model.entities.User;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -52,6 +54,26 @@ public class ApplicantFacultyDaoTest {
             applicantFacultyDao.deleteEntity(actual);
         }
 
+        Assert.assertNotNull(actual);
+    }
+
+    @Test
+    public void findById() {
+        ApplicantFaculty applicantFaculty = ApplicantFaculty.builder()
+                .id(0L)
+                .userId(4L)
+                .facultyId(1L)
+                .mark1(111)
+                .mark2(111)
+                .mark3(111)
+                .avgCertificateMark(11)
+                .passed(false)
+                .build();
+
+        applicantFacultyDao.add(applicantFaculty);
+        ApplicantFaculty entity = applicantFacultyDao.findByUserAndFaculty(4L, 1L);
+        ApplicantFaculty actual = applicantFacultyDao.findById(entity.getId());
+        applicantFacultyDao.delete(entity.getId());
         Assert.assertNotNull(actual);
     }
 
@@ -161,5 +183,118 @@ public class ApplicantFacultyDaoTest {
         if(applicantFaculty2 != null) {
             applicantFacultyDao.deleteEntity(applicantFaculty2);
         }
+    }
+
+    @Test
+    public void isExist() {
+        ApplicantFaculty applicantFaculty = ApplicantFaculty.builder()
+                .id(0L)
+                .userId(4L)
+                .facultyId(1L)
+                .mark1(111)
+                .mark2(111)
+                .mark3(111)
+                .avgCertificateMark(11)
+                .passed(false)
+                .build();
+
+        applicantFacultyDao.add(applicantFaculty);
+        ApplicantFaculty entity = applicantFacultyDao.findByUserAndFaculty(4L, 1L);
+        boolean actual = applicantFacultyDao.isExisting(applicantFaculty);
+        if(actual) {
+            applicantFacultyDao.deleteEntity(entity);
+        }
+        Assert.assertTrue(actual);
+    }
+
+    @Test
+    public void findByFacultyId() {
+        ApplicantFaculty applicantFaculty = ApplicantFaculty.builder()
+                .id(0L)
+                .userId(4L)
+                .facultyId(1L)
+                .mark1(111)
+                .mark2(111)
+                .mark3(111)
+                .avgCertificateMark(11)
+                .passed(false)
+                .build();
+
+        applicantFacultyDao.add(applicantFaculty);
+        ApplicantFaculty entity = applicantFacultyDao.findByUserAndFaculty(4L, 1L);
+        List<ApplicantFaculty> actual = applicantFacultyDao.findByFacultyId(1L);
+        if(entity != null) {
+            applicantFacultyDao.deleteEntity(entity);
+        }
+        Assert.assertNotNull(actual);
+    }
+
+    @Test
+    public void getFacultiesWithApplicant() {
+        ApplicantFaculty applicantFaculty = ApplicantFaculty.builder()
+                .id(0L)
+                .userId(4L)
+                .facultyId(1L)
+                .mark1(111)
+                .mark2(111)
+                .mark3(111)
+                .avgCertificateMark(11)
+                .passed(false)
+                .build();
+
+        applicantFacultyDao.add(applicantFaculty);
+        ApplicantFaculty entity = applicantFacultyDao.findByUserAndFaculty(4L, 1L);
+        List<Long> actual = applicantFacultyDao.getFacultiesWithApplicant(4L);
+        if(entity != null) {
+            applicantFacultyDao.deleteEntity(entity);
+        }
+        Assert.assertNotNull(actual);
+    }
+
+    @Test
+    public void findByUserAndFaculty() {
+        ApplicantFaculty applicantFaculty = ApplicantFaculty.builder()
+                .id(0L)
+                .userId(4L)
+                .facultyId(1L)
+                .mark1(111)
+                .mark2(111)
+                .mark3(111)
+                .avgCertificateMark(11)
+                .passed(false)
+                .build();
+
+        applicantFacultyDao.add(applicantFaculty);
+        ApplicantFaculty entity = applicantFacultyDao.findByUserAndFaculty(4L, 1L);
+        if(entity != null) {
+            applicantFacultyDao.deleteEntity(entity);
+        }
+        Assert.assertNotNull(entity);
+    }
+
+    @Test
+    public void userUpdate() {
+        ApplicantFaculty applicantFaculty = ApplicantFaculty.builder()
+                .id(0L)
+                .userId(4L)
+                .facultyId(1L)
+                .mark1(111)
+                .mark2(111)
+                .mark3(111)
+                .avgCertificateMark(11)
+                .passed(false)
+                .build();
+
+        ApplicantFaculty newApplicantFaculty = new ApplicantFaculty(applicantFaculty);
+        newApplicantFaculty.setId(2L);
+        newApplicantFaculty.setUserId(2L);
+        newApplicantFaculty.setFacultyId(2L);
+        newApplicantFaculty.setMark1(102);
+        newApplicantFaculty.setMark2(102);
+        newApplicantFaculty.setMark3(102);
+        newApplicantFaculty.setAvgCertificateMark(2.2);
+        newApplicantFaculty.setPassed(true);
+
+        Assert.assertNotEquals(applicantFaculty, newApplicantFaculty);
     }
 }

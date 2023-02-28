@@ -9,6 +9,16 @@ public class Faculty implements Serializable {
     private long budgetPlaces;
     private long totalPlaces;
 
+    public Faculty() {
+    }
+
+    public Faculty(Faculty faculty) {
+        this.id = faculty.id;
+        this.name = faculty.name;
+        this.budgetPlaces = faculty.budgetPlaces;
+        this.totalPlaces = faculty.totalPlaces;
+    }
+
     public long getId() {
         return id;
     }

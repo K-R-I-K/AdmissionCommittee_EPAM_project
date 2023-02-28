@@ -7,7 +7,10 @@ import org.junit.Test;
 import org.my.model.dao.implementations.FacultyDaoImpl;
 import org.my.model.db.ConnectionPool;
 import org.my.model.db.DBException;
+import org.my.model.entities.ApplicantFaculty;
 import org.my.model.entities.Faculty;
+import org.my.model.entities.Role;
+import org.my.model.entities.User;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -48,6 +51,22 @@ public class FacultyDaoTest {
             facultyDao.deleteEntity(actual);
         }
 
+        Assert.assertNotNull(actual);
+    }
+
+    @Test
+    public void findById() {
+        Faculty faculty = Faculty.builder()
+                .id(0L)
+                .name("name111")
+                .budgetPlaces(111)
+                .totalPlaces(111111)
+                .build();
+
+        facultyDao.add(faculty);
+        Faculty entity = facultyDao.findByName("name111");
+        Faculty actual = facultyDao.findById(entity.getId());
+        facultyDao.delete(entity.getId());
         Assert.assertNotNull(actual);
     }
 
@@ -137,5 +156,76 @@ public class FacultyDaoTest {
         if(faculty2 != null) {
             facultyDao.deleteEntity(faculty2);
         }
+    }
+
+    @Test
+    public void isExist() {
+        Faculty faculty = Faculty.builder()
+                .id(0L)
+                .name("name111")
+                .budgetPlaces(111)
+                .totalPlaces(111111)
+                .build();
+
+        facultyDao.add(faculty);
+        Faculty entity = facultyDao.findByName("name111");
+        boolean actual = facultyDao.isExisting(faculty);
+        if(actual) {
+            facultyDao.deleteEntity(entity);
+        }
+        Assert.assertTrue(actual);
+    }
+
+    @Test
+    public void findByName() {
+        Faculty faculty = Faculty.builder()
+                .id(0L)
+                .name("name111")
+                .budgetPlaces(111)
+                .totalPlaces(111111)
+                .build();
+
+        facultyDao.add(faculty);
+        Faculty entity = facultyDao.findByName("name111");
+        if(entity != null) {
+            facultyDao.deleteEntity(entity);
+        }
+        Assert.assertNotNull(entity);
+    }
+
+    @Test
+    public void getFacultiesWithSorting() {
+        Faculty faculty = Faculty.builder()
+                .id(0L)
+                .name("name111")
+                .budgetPlaces(111)
+                .totalPlaces(111111)
+                .build();
+
+        facultyDao.add(faculty);
+        Faculty entity = facultyDao.findByName("name111");
+        List<Faculty> actual = facultyDao.getFacultiesWithSorting("byName(a-z)", 1);
+        if(entity != null) {
+            facultyDao.deleteEntity(entity);
+        }
+        Assert.assertNotNull(actual);
+    }
+
+    @Test
+    public void userUpdate() {
+        Faculty faculty = Faculty.builder()
+                .id(0L)
+                .name("name111")
+                .budgetPlaces(111)
+                .totalPlaces(111111)
+                .build();
+
+        Faculty newFaculty = new Faculty(faculty);
+        newFaculty.setId(2L);
+        newFaculty.setName("2");
+        newFaculty.setBudgetPlaces(2);
+        newFaculty.setTotalPlaces(2);
+
+        Assert.assertNotEquals(faculty, newFaculty);
     }
 }

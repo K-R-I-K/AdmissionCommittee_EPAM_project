@@ -15,6 +15,21 @@ public class User implements Serializable {
     private String region;
     private String educationalInstitution;
 
+    public User() {
+    }
+
+    public User(User user) {
+        this.id = user.id;
+        this.login = user.login;
+        this.password = user.password;
+        this.role = user.role;
+        this.name = user.name;
+        this.email = user.email;
+        this.city = user.city;
+        this.region = user.region;
+        this.educationalInstitution = user.educationalInstitution;
+    }
+
     public long getId() {
         return id;
     }

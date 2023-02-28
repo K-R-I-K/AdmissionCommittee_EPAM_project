@@ -7,6 +7,7 @@ import org.junit.Test;
 import org.my.model.dao.implementations.UserDaoImpl;
 import org.my.model.db.ConnectionPool;
 import org.my.model.db.DBException;
+import org.my.model.entities.Faculty;
 import org.my.model.entities.Role;
 import org.my.model.entities.User;
 
@@ -54,6 +55,27 @@ public class UserDaoTest {
             userDao.deleteEntity(actual);
         }
 
+        Assert.assertNotNull(actual);
+    }
+
+    @Test
+    public void findById() {
+        User user = User.builder()
+                .id(0L)
+                .login("login111")
+                .password("password111")
+                .role(Role.APPLICANT.toString())
+                .name("name111")
+                .email("email111")
+                .city("city111")
+                .region("region111")
+                .educationalInstitution("educationalInstitution111")
+                .build();
+
+        userDao.add(user);
+        User entity = userDao.findByLoginAndPassword("login111", "password111");
+        User actual = userDao.findById(entity.getId());
+        userDao.delete(entity.getId());
         Assert.assertNotNull(actual);
     }
 
@@ -168,5 +190,78 @@ public class UserDaoTest {
         if(user2 != null) {
             userDao.deleteEntity(user2);
         }
+    }
+
+    @Test
+    public void isExist() {
+        User user = User.builder()
+                .id(0L)
+                .login("login111")
+                .password("password111")
+                .role(Role.APPLICANT.toString())
+                .name("name111")
+                .email("email111")
+                .city("city111")
+                .region("region111")
+                .educationalInstitution("educationalInstitution111")
+                .build();
+
+        userDao.add(user);
+        User entity = userDao.findByLoginAndPassword("login111", "password111");
+        boolean actual = userDao.isExisting(user);
+        if(actual) {
+            userDao.deleteEntity(entity);
+        }
+        Assert.assertTrue(actual);
+    }
+
+    @Test
+    public void findByLoginAndPassword() {
+        User user = User.builder()
+                .id(0L)
+                .login("login111")
+                .password("password111")
+                .role(Role.APPLICANT.toString())
+                .name("name111")
+                .email("email111")
+                .city("city111")
+                .region("region111")
+                .educationalInstitution("educationalInstitution111")
+                .build();
+
+        userDao.add(user);
+        User entity = userDao.findByLoginAndPassword("login111", "password111");
+        if(entity != null) {
+            userDao.deleteEntity(entity);
+        }
+        Assert.assertNotNull(entity);
+    }
+
+    @Test
+    public void userUpdate() {
+        User user = User.builder()
+                .id(0L)
+                .login("login111")
+                .password("password111")
+                .role(Role.APPLICANT.toString())
+                .name("name111")
+                .email("email111")
+                .city("city111")
+                .region("region111")
+                .educationalInstitution("educationalInstitution111")
+                .build();
+
+        User newUser = new User(user);
+        newUser.setId(2L);
+        newUser.setLogin("2");
+        newUser.setPassword("2");
+        newUser.setRole(Role.ADMIN);
+        newUser.setName("2");
+        newUser.setEmail("2@2");
+        newUser.setCity("2");
+        newUser.setRegion("2");
+        newUser.setEducationalInstitution("2");
+
+        Assert.assertNotEquals(user, newUser);
     }
 }

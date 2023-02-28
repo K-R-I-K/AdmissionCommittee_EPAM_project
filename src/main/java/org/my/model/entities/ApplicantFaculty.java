@@ -15,6 +15,20 @@ public class ApplicantFaculty {
         passed = false;
     }
 
+    public ApplicantFaculty() {
+    }
+
+    public ApplicantFaculty(ApplicantFaculty applicantFaculty) {
+        this.id = applicantFaculty.id;
+        this.userId = applicantFaculty.userId;
+        this.facultyId = applicantFaculty.facultyId;
+        this.mark1 = applicantFaculty.mark1;
+        this.mark2 = applicantFaculty.mark2;
+        this.mark3 = applicantFaculty.mark3;
+        this.avgCertificateMark = applicantFaculty.avgCertificateMark;
+        this.passed = applicantFaculty.passed;
+    }
+
     public long getId() {
         return id;
     }
